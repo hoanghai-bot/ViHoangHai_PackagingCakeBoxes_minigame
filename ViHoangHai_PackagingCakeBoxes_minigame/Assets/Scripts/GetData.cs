@@ -49,6 +49,7 @@ public class GetData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Input.multiTouchEnabled = false;
         isPlay = PlayerPrefs.GetInt("isPlay", 0);
         level = PlayerPrefs.GetInt("level", 1);
         levelPlayed = PlayerPrefs.GetInt("levelPlayed", 1);
