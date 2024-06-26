@@ -1,19 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GetData : MonoBehaviour
 {
-
     public static GetData instance;
 
-    
+
 
     private int _isPlay;
     public int isPlay
     {
-        get => _isPlay; 
+        get => _isPlay;
         set
         {
             _isPlay = value;
@@ -40,7 +38,7 @@ public class GetData : MonoBehaviour
             PlayerPrefs.SetInt("levelPlayed", levelPlayed);
         }
     }
-    
+
     public List<int> star;
 
     private void Awake()
@@ -61,7 +59,7 @@ public class GetData : MonoBehaviour
     {
         SaveList<int>("star", star);
 
-        
+
     }
 
     // Một lớp để lưu list
@@ -94,6 +92,6 @@ public class GetData : MonoBehaviour
             ListWrapper<T> listWrapper = JsonUtility.FromJson<ListWrapper<T>>(json);
             return listWrapper.list;
         }
-        return new List<T>() ;
+        return new List<T>();
     }
 }
